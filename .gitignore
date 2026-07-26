@@ -1,0 +1,33 @@
+# Secrets and local configuration
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Generated packages and release manifests
+**/releases/*.zip
+**/releases/*.json
+**/*.ocmod.zip
+**/*.release.json
+
+# Local tooling
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+__MACOSX/
+
+# OpenCart runtime and cache output
+storage/
+system/storage/
+modification/
+cache/
+logs/
