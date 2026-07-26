@@ -1,25 +1,33 @@
 # DevmanExtensiones Extensions
 
-Repositorio central de ejemplos y pruebas para módulos personalizados creados con `devman-ext`.
+Repositorio de pruebas para guardar únicamente los ZIP finales aprobados generados con `devman-ext`.
 
-## Uso
+## Organización
 
-- Guardar cada módulo dentro de `modules/<codigo>/`.
-- Usar una rama independiente por módulo o cambio.
-- No modificar archivos core de OpenCart.
-- No modificar archivos core de Journal, Journal2 o Journal3.
-- No guardar credenciales, licencias reales, UUID de clientes ni datos privados.
-- No guardar ZIPs finales de clientes en este repositorio público.
-
-## Estructura
+Cada extensión se guarda según su tipo, nombre y versión:
 
 ```text
-modules/
-  <codigo>/
-    specification.yaml
-    src/
-    tests/
-    docs/
+modules/<nombre>/<version>/<archivo>.ocmod.zip
+shipping/<nombre>/<version>/<archivo>.ocmod.zip
+payment/<nombre>/<version>/<archivo>.ocmod.zip
+total/<nombre>/<version>/<archivo>.ocmod.zip
+feed/<nombre>/<version>/<archivo>.ocmod.zip
+fraud/<nombre>/<version>/<archivo>.ocmod.zip
 ```
 
-Este repositorio es únicamente para pruebas y ejemplos. Los productos reales o datos sensibles deben mantenerse en repositorios privados.
+Ejemplo:
+
+```text
+modules/whatsapp-flotante/1.0.0/whatsapp_flotante.ocmod.zip
+shipping/envio-personalizado/1.1.0/envio_personalizado.ocmod.zip
+```
+
+## Flujo
+
+1. Crear y probar el módulo con `/devman-ext`.
+2. Verificar que todo funcione correctamente.
+3. Pedir confirmación antes de publicar.
+4. Subir únicamente el ZIP final a la carpeta correspondiente.
+5. Para una nueva versión, crear otra carpeta de versión sin reemplazar la anterior.
+
+Este repositorio es público y se usa solo para ejemplos y pruebas. No subir credenciales, licencias, UUID reales de clientes ni información privada.
