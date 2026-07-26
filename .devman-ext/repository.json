@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "role": "custom-modules-central",
+  "display_name": "DevmanExtensiones Extensions",
+  "modules_root": "modules",
+  "template_root": "templates/module",
+  "public_examples_only": true,
+  "allow_real_credentials": false,
+  "allow_customer_data": false,
+  "generator_repository_hint": "devman-ext"
+}
